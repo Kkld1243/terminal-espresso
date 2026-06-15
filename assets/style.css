@@ -99,7 +99,7 @@ img{max-width:100%;display:block}
 /* ===== HERO / 일러스트 배너 + 출발안내판 ===== */
 .thero{background:var(--paper);padding-bottom:0}
 .thero-illust{width:100%;overflow:hidden;border-bottom:1px solid var(--line)}
-.thero-illust img{width:100%;height:auto;display:block;mix-blend-mode:multiply}
+.thero-illust img{width:120%;max-width:none;margin-left:-10%;height:auto;display:block;mix-blend-mode:multiply}
 .thero-grid{
   display:grid;grid-template-columns:1.02fr .98fr;gap:72px;align-items:center;
   padding-top:90px;
