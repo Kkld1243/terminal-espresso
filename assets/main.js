@@ -22,6 +22,16 @@ document.getElementById('ssPrev')?.addEventListener('click', () =>
   track.scrollBy({ left: -step(), behavior: 'smooth' })
 );
 
+// 2b) Feature (수상·선정) slider arrows
+const featTrack = document.getElementById('featTrack');
+const featStep = () => featTrack ? featTrack.getBoundingClientRect().width : 360;
+document.getElementById('featNext')?.addEventListener('click', () =>
+  featTrack.scrollBy({ left: featStep(), behavior: 'smooth' })
+);
+document.getElementById('featPrev')?.addEventListener('click', () =>
+  featTrack.scrollBy({ left: -featStep(), behavior: 'smooth' })
+);
+
 // 3) Reveal-on-scroll (gated by .js in CSS so no-JS still shows everything)
 const io = new IntersectionObserver((entries) => {
   entries.forEach(e => {

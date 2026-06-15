@@ -159,7 +159,15 @@ img{max-width:100%;display:block}
 .st-index .num{font-family:var(--mono);font-size:var(--t-cap);color:rgba(255,255,255,.55);font-weight:500;letter-spacing:.06em}
 
 /* ===== FEATURE (100 BEST 선정) ===== */
-.feature{position:relative;min-height:600px;display:flex;align-items:flex-end;overflow:hidden;color:#fff}
+.feature{position:relative;overflow:hidden;color:#fff}
+.feat-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth}
+.feat-track::-webkit-scrollbar{display:none}
+.feat-slide{flex:0 0 100%;position:relative;min-height:600px;display:flex;align-items:flex-end;overflow:hidden;scroll-snap-align:start}
+.feat-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:5;
+  width:48px;height:48px;border:none;cursor:pointer;background:rgba(255,255,255,.85);
+  color:var(--ink);font-size:22px;line-height:1;transition:.2s}
+.feat-arrow:hover{background:#fff}
+.feat-prev{left:18px}.feat-next{right:18px}
 .feature-img{position:absolute;inset:0;background-size:cover;background-position:center}
 .feature-shade{position:absolute;inset:0;background:linear-gradient(0deg,rgba(18,12,8,.82) 0%,rgba(18,12,8,.15) 60%,rgba(18,12,8,.4) 100%)}
 .feature-badge{
@@ -418,7 +426,7 @@ img{max-width:100%;display:block}
   .award-banner{grid-template-columns:1fr}
   .ab-thumb{min-height:220px}
   .ab-body{padding:30px 28px}
-  .ss-arrow{display:none}
+  .ss-arrow,.feat-arrow{display:none}
   .space-slider{margin-top:34px}
   .ss-track{gap:14px;padding:0 7%;scroll-padding:0 7%}
   .ss-slide{flex:0 0 86%}
