@@ -125,7 +125,7 @@ img{max-width:100%;display:block}
 .triptych{background:var(--paper);padding:124px 0 130px}
 .trip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
 .trip{display:flex;flex-direction:column;color:inherit}
-.trip-img{aspect-ratio:4/5;background-size:cover;background-position:center;filter:saturate(.95);
+.trip-img{aspect-ratio:3/2;background-size:cover;background-position:center;filter:saturate(.95);
   transition:filter .45s,transform .45s,opacity .45s}
 .trip:hover .trip-img{filter:saturate(1);opacity:.92}
 .trip-cap{padding-top:20px;display:flex;flex-direction:column;gap:10px}
