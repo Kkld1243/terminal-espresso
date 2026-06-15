@@ -17,7 +17,7 @@
   --sans:"Pretendard Variable",Pretendard,-apple-system,system-ui,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
   --serif:var(--sans);   /* headings share Pretendard for a clean mono-type system */
   --display:var(--sans);
-  --mono:"SFMono-Regular",ui-monospace,"SF Mono","JetBrains Mono","Roboto Mono",Menlo,Consolas,monospace;
+  --mono:var(--sans);   /* 전 요소 Pretendard 통일 (숫자·라벨 포함) */
 
   /* Type scale (size / line-height) — fixed hierarchy */
   --t-display:30px; --lh-display:40px;   /* 매우 큰 제목 */
