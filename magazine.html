@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>터미널 이야기 · Terminal Espresso House</title>
+  <meta name="description" content="공지 · 사설 칼럼 · 보도자료 — 매거진으로 전하는 터미널 에스프레소 하우스의 이야기." />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/img/favicon-180.png" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+  <header class="topbar" id="topbar">
+    <nav class="nav">
+      <ul class="nav-links nav-left">
+        <li><a href="brand.html">소개</a></li>
+        <li><a href="bean.html">원두</a></li>
+        <li><a href="index.html#space">공간</a></li>
+        <li><a href="magazine.html">이야기</a></li>
+      </ul>
+      <a href="index.html" class="brand" aria-label="터미널 에스프레소 하우스 홈">
+        <img src="assets/img/logo-dark.png" alt="Terminal Espresso House" class="brand-logo" />
+      </a>
+      <div class="nav-right">
+        <a class="icon-btn" href="https://www.instagram.com/terminal.eh/" target="_blank" rel="noopener noreferrer" aria-label="인스타그램">
+          <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="13" x2="21" y2="13"/><line x1="3" y1="19" x2="21" y2="19"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="brand.html">터미널 소개</a>
+    <a href="bean.html">원두 이야기</a>
+    <a href="index.html#space">공간</a>
+    <a href="magazine.html">터미널 이야기</a>
+  </div>
+
+  <main>
+    <section class="subhero">
+      <div class="container">
+        <span class="kick">Magazine</span>
+        <h1>터미널 이야기</h1>
+        <p>공지 · 사설 칼럼 · 보도자료. 매거진으로 전하는 터미널의 하루와 생각을 모았습니다.</p>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="container">
+        <nav class="mag-tabs" id="magTabs" aria-label="분류">
+          <a href="#" data-filter="all" class="on">전체</a>
+          <a href="#" data-filter="공지">공지</a>
+          <a href="#" data-filter="칼럼">칼럼</a>
+          <a href="#" data-filter="보도자료">보도자료</a>
+          <a href="#" data-filter="매거진">매거진</a>
+        </nav>
+
+        <div class="news-grid" id="magGrid">
+          <a class="news-card" data-cat="보도자료" href="article.html?id=a1">
+            <span class="news-flag">NEW</span>
+            <div class="nc-img" style="background-image:url('assets/img/news1.jpg')"></div>
+            <div class="nc-body"><span class="nc-tag">보도자료</span><h4>글로벌 커피 교육을 위한 협업 세미나 진행</h4><span class="nc-date">2026.06.09</span></div>
+          </a>
+          <a class="news-card" data-cat="공지" href="article.html?id=a2">
+            <span class="news-flag">NEW</span>
+            <div class="nc-img" style="background-image:url('assets/img/news2.jpg')"></div>
+            <div class="nc-body"><span class="nc-tag">공지</span><h4>터미널, 산지와 함께하는 지속가능 커피 이야기</h4><span class="nc-date">2026.05.30</span></div>
+          </a>
+          <a class="news-card" data-cat="칼럼" href="article.html?id=a3">
+            <div class="nc-img" style="background-image:url('assets/img/news3.jpg')"></div>
+            <div class="nc-body"><span class="nc-tag">칼럼</span><h4>1,000원대 에스프레소, 우리가 문턱을 낮추는 이유</h4><span class="nc-date">2026.05.15</span></div>
+          </a>
+          <a class="news-card" data-cat="매거진" href="article.html?id=a4">
+            <div class="nc-img" style="background-image:url('assets/img/news4.jpg')"></div>
+            <div class="nc-body"><span class="nc-tag">매거진</span><h4>매일 굽는 빵과 커피, 터미널의 하루</h4><span class="nc-date">2026.05.02</span></div>
+          </a>
+          <a class="news-card" data-cat="보도자료" href="article.html?id=a5">
+            <div class="nc-img" style="background-image:url('assets/img/people/act-1.jpg')"></div>
+            <div class="nc-body"><span class="nc-tag">보도자료</span><h4>2026 포브스코리아 사회공헌대상 수상</h4><span class="nc-date">2026.04.20</span></div>
+          </a>
+          <a class="news-card" data-cat="공지" href="article.html?id=a6">
+            <div class="nc-img" style="background-image:url('assets/img/card-intro.jpg')"></div>
+            <div class="nc-body"><span class="nc-tag">공지</span><h4>2026 콜럼버스 커피 맛집 가이드 선정</h4><span class="nc-date">2026.04.05</span></div>
+          </a>
+          <a class="news-card" data-cat="칼럼" href="article.html?id=a7">
+            <div class="nc-img" style="background-image:url('assets/img/store/gangseo-4.jpg')"></div>
+            <div class="nc-body"><span class="nc-tag">칼럼</span><h4>좋은 원두를 더 많은 이들과 나눈다는 것</h4><span class="nc-date">2026.03.22</span></div>
+          </a>
+          <a class="news-card" data-cat="공지" href="article.html?id=a8">
+            <div class="nc-img" style="background-image:url('assets/img/store/gangseo-1.jpg')"></div>
+            <div class="nc-body"><span class="nc-tag">공지</span><h4>강서점, 새로운 공간으로 여러분을 맞이합니다</h4><span class="nc-date">2026.03.08</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="f-brand">
+        <img src="assets/img/logo-light.png" alt="Terminal Espresso House" class="f-logo" />
+        <p class="f-tag">머무는 모든 순간이 위로가 되는 공간</p>
+      </div>
+      <div class="f-cols">
+        <div class="f-col"><h5>터미널</h5><a href="brand.html">브랜드 소개</a><a href="bean.html">원두 이야기</a><a href="magazine.html">터미널 이야기</a><a href="index.html#space">공간</a></div>
+        <div class="f-col"><h5>문의</h5><a href="mailto:onleaveglobal@gmail.com">제휴·문의</a><a href="#">채용</a><a href="#">고객의 소리</a></div>
+        <div class="f-col"><h5>SNS</h5><a href="https://www.instagram.com/terminal.eh/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="#">YouTube</a><a href="#">Blog</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <span>© 2026 Terminal Espresso House. All rights reserved.</span>
+      <span>이용약관 · 개인정보처리방침</span>
+    </div>
+  </footer>
+
+  <script>
+    // 매거진 분류 필터
+    const magTabs = document.getElementById('magTabs');
+    const magCards = [...document.querySelectorAll('#magGrid .news-card')];
+    magTabs?.addEventListener('click', e => {
+      const t = e.target.closest('a[data-filter]');
+      if (!t) return;
+      e.preventDefault();
+      magTabs.querySelectorAll('a').forEach(a => a.classList.toggle('on', a === t));
+      const f = t.dataset.filter;
+      magCards.forEach(c => { c.style.display = (f === 'all' || c.dataset.cat === f) ? '' : 'none'; });
+    });
+  </script>
+  <script src="assets/main.js"></script>
+</body>
+</html>

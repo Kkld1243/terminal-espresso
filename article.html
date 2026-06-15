@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>터미널 이야기 · Terminal Espresso House</title>
+  <meta name="description" content="터미널 에스프레소 하우스 — 공지 · 사설 칼럼 · 보도자료." />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/img/favicon-180.png" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+  <header class="topbar" id="topbar">
+    <nav class="nav">
+      <ul class="nav-links nav-left">
+        <li><a href="brand.html">소개</a></li>
+        <li><a href="bean.html">원두</a></li>
+        <li><a href="index.html#space">공간</a></li>
+        <li><a href="magazine.html">이야기</a></li>
+      </ul>
+      <a href="index.html" class="brand" aria-label="터미널 에스프레소 하우스 홈">
+        <img src="assets/img/logo-dark.png" alt="Terminal Espresso House" class="brand-logo" />
+      </a>
+      <div class="nav-right">
+        <a class="icon-btn" href="https://www.instagram.com/terminal.eh/" target="_blank" rel="noopener noreferrer" aria-label="인스타그램">
+          <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="13" x2="21" y2="13"/><line x1="3" y1="19" x2="21" y2="19"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="brand.html">터미널 소개</a>
+    <a href="bean.html">원두 이야기</a>
+    <a href="index.html#space">공간</a>
+    <a href="magazine.html">터미널 이야기</a>
+  </div>
+
+  <main>
+    <article class="article">
+      <div class="container">
+        <a class="back-link" href="magazine.html">← 터미널 이야기</a>
+        <div class="art-head">
+          <span class="art-cat" id="artCat"></span>
+          <h1 class="art-title" id="artTitle"></h1>
+          <p class="art-date" id="artDate"></p>
+        </div>
+      </div>
+      <div class="art-hero" id="artHero"></div>
+      <div class="container">
+        <div class="art-body" id="artBody"></div>
+        <a class="art-more" href="magazine.html">← 목록으로 돌아가기</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="f-brand">
+        <img src="assets/img/logo-light.png" alt="Terminal Espresso House" class="f-logo" />
+        <p class="f-tag">머무는 모든 순간이 위로가 되는 공간</p>
+      </div>
+      <div class="f-cols">
+        <div class="f-col"><h5>터미널</h5><a href="brand.html">브랜드 소개</a><a href="bean.html">원두 이야기</a><a href="index.html#space">공간</a><a href="magazine.html">터미널 이야기</a></div>
+        <div class="f-col"><h5>문의</h5><a href="mailto:onleaveglobal@gmail.com">제휴·문의</a><a href="#">채용</a><a href="#">고객의 소리</a></div>
+        <div class="f-col"><h5>SNS</h5><a href="https://www.instagram.com/terminal.eh/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="#">YouTube</a><a href="#">Blog</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <span>© 2026 Terminal Espresso House. All rights reserved.</span>
+      <span>이용약관 · 개인정보처리방침</span>
+    </div>
+  </footer>
+
+  <script>
+    const ARTICLES = {
+      a1: { cat:'보도자료', date:'2026.06.09', img:'assets/img/news1.jpg',
+        title:'글로벌 커피 교육을 위한 협업 세미나 진행',
+        body:['터미널 에스프레소 하우스가 산지·교육기관과 함께 글로벌 커피 교육을 위한 협업 세미나를 열었습니다. 좋은 커피가 더 많은 이들에게 닿기 위해서는 산지와 소비지가 함께 배우고 성장해야 한다는 믿음에서 출발한 자리입니다.',
+              '이번 세미나에서는 생두 품질 관리부터 로스팅, 추출에 이르는 전 과정을 공유했습니다. 터미널은 앞으로도 커피를 매개로 한 교육과 교류를 이어가며, 도심 속 휴먼 허브로서의 역할을 넓혀가겠습니다.'] },
+      a2: { cat:'공지', date:'2026.05.30', img:'assets/img/news2.jpg',
+        title:'터미널, 산지와 함께하는 지속가능 커피 이야기',
+        body:['한 잔의 커피가 식탁에 오르기까지, 수많은 손길이 닿습니다. 터미널은 산지 농가와의 신뢰를 바탕으로 지속가능한 커피를 만들어가고 있습니다.',
+              '좋은 원두를 합리적인 가격으로 더 많은 분들과 나누는 일, 그리고 그 과정이 산지에도 따뜻하게 돌아가는 일. 터미널이 묵묵히 이어가는 약속입니다.'] },
+      a3: { cat:'사설 칼럼', date:'2026.05.15', img:'assets/img/news3.jpg',
+        title:'1,000원대 에스프레소, 우리가 문턱을 낮추는 이유',
+        body:['최상급 에스프레소를 1,000원대의 합리적인 가격으로 내어 드리는 이유는 단순합니다. 고가 커피 시장의 문턱을 낮추고 싶기 때문입니다.',
+              '브랜드명 ‘터미널’이 상징하듯, 다양한 이들이 머물며 위로를 얻는 도심 속 휴먼 허브가 되는 것. 가격이 누군가의 하루에 작은 위로를 더하는 일이 되기를 바랍니다.'] },
+      a4: { cat:'매거진', date:'2026.05.02', img:'assets/img/news4.jpg',
+        title:'매일 굽는 빵과 커피, 터미널의 하루',
+        body:['이른 아침, 터미널의 하루는 갓 구운 빵과 막 내린 에스프레소의 향으로 시작됩니다. 매일 굽고 매일 내리는 정성으로 머무는 모든 순간을 채웁니다.',
+              '바쁜 도심 한가운데, 잠시 숨을 고를 수 있는 따뜻한 공간. 그 평범한 하루가 터미널이 가장 소중히 여기는 풍경입니다.'] },
+      a5: { cat:'보도자료', date:'2026.04.20', img:'assets/img/people/act-1.jpg',
+        title:'2026 포브스코리아 사회공헌대상 수상',
+        body:['터미널 에스프레소 하우스가 2026 포브스코리아 사회공헌대상을 수상했습니다. 매장 안팎에서 묵묵히 이어온 사회공헌 활동이 인정받은 결과입니다.',
+              '따뜻한 일을 하는 브랜드. 터미널은 앞으로도 지역과 산지, 그리고 사람을 향한 따뜻한 실천을 이어가겠습니다.'] },
+      a6: { cat:'공지', date:'2026.04.05', img:'assets/img/card-intro.jpg',
+        title:'2026 콜럼버스 커피 맛집 가이드 선정',
+        body:['터미널의 공간과 커피가 2026 콜럼버스 커피 맛집 가이드에 이름을 올렸습니다. 도심 속 휴먼 허브로서 머무는 모든 순간을 위로로 채우려는 노력이 닿은 결과입니다.',
+              '앞으로도 진심을 담은 한 잔으로 더 많은 분들을 맞이하겠습니다.'] },
+      a7: { cat:'사설 칼럼', date:'2026.03.22', img:'assets/img/store/gangseo-4.jpg',
+        title:'좋은 원두를 더 많은 이들과 나눈다는 것',
+        body:['좋은 원두는 특별한 누군가만의 것이 아니어야 합니다. 터미널은 좋은 산지의 생두를 합리적인 가격으로 더 많은 분들과 나누는 일에 집중합니다.',
+              '블렌드와 싱글 오리진을 매장에서 직접 내려 드리고, 도매 공급도 함께합니다. 한 잔의 진심이 더 넓게 닿기를 바랍니다.'] },
+      a8: { cat:'공지', date:'2026.03.08', img:'assets/img/store/gangseo-1.jpg',
+        title:'강서점, 새로운 공간으로 여러분을 맞이합니다',
+        body:['마곡의 너른 거리를 마주한 통유리 공간, 터미널 강서점이 새롭게 여러분을 맞이합니다. 햇살이 깊게 드는 자리에서 도심의 속도를 잠시 늦춰보세요.',
+              '머무는 모든 순간이 위로가 되는 공간. 강서점에서 따뜻한 한 잔과 함께 기다리겠습니다.'] },
+    };
+    const a = ARTICLES[new URLSearchParams(location.search).get('id')] || ARTICLES.a1;
+    document.title = `${a.title} · Terminal Espresso House`;
+    document.getElementById('artCat').textContent = a.cat;
+    document.getElementById('artTitle').textContent = a.title;
+    document.getElementById('artDate').textContent = a.date;
+    document.getElementById('artHero').innerHTML = `<img src="${a.img}" alt="${a.title}" />`;
+    document.getElementById('artBody').innerHTML = a.body.map(p => `<p>${p}</p>`).join('');
+  </script>
+  <script src="assets/main.js"></script>
+</body>
+</html>
