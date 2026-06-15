@@ -216,7 +216,7 @@ img{max-width:100%;display:block}
 
 /* ===== SPACE GALLERY (공간, 영화관 느낌) ===== */
 .space{padding:150px 0;background:var(--paper)}
-.gallery{margin-top:50px}
+.gallery{margin-top:0}
 .g-stage{position:relative;width:100%;aspect-ratio:2/1;overflow:hidden;background:var(--paper-2)}
 .g-slide{position:absolute;inset:0;opacity:0;pointer-events:none;
   background-size:cover;background-position:center;filter:saturate(.95);
@@ -428,7 +428,6 @@ img{max-width:100%;display:block}
   .ab-thumb{min-height:220px}
   .ab-body{padding:30px 28px}
   .feat-arrow{display:none}
-  .gallery{margin-top:34px}
   .g-stage{aspect-ratio:3/2}
   .g-arrow{width:40px;height:40px}
   .br-m{display:none}
