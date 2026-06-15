@@ -22,15 +22,29 @@ document.getElementById('ssPrev')?.addEventListener('click', () =>
   track.scrollBy({ left: -step(), behavior: 'smooth' })
 );
 
-// 2b) Feature (수상·선정) slider arrows
+// 2b) Feature (수상·선정) slider — 좌우 화살표 + 4초 자동 전환
 const featTrack = document.getElementById('featTrack');
-const featStep = () => featTrack ? featTrack.getBoundingClientRect().width : 360;
-document.getElementById('featNext')?.addEventListener('click', () =>
-  featTrack.scrollBy({ left: featStep(), behavior: 'smooth' })
-);
-document.getElementById('featPrev')?.addEventListener('click', () =>
-  featTrack.scrollBy({ left: -featStep(), behavior: 'smooth' })
-);
+if (featTrack) {
+  const featSlides = featTrack.querySelectorAll('.feat-slide');
+  const featW = () => featTrack.getBoundingClientRect().width;
+  const featCur = () => Math.round(featTrack.scrollLeft / featW());
+  const featGo = (idx) => {
+    const n = featSlides.length;
+    const t = ((idx % n) + n) % n;            // wrap-around (마지막 → 처음)
+    featTrack.scrollTo({ left: t * featW(), behavior: 'smooth' });
+  };
+  let featTimer;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const featStart = () => { if (!reduce) featTimer = setInterval(() => featGo(featCur() + 1), 4000); };
+  const featStop = () => clearInterval(featTimer);
+  const featReset = () => { featStop(); featStart(); };
+  document.getElementById('featNext')?.addEventListener('click', () => { featGo(featCur() + 1); featReset(); });
+  document.getElementById('featPrev')?.addEventListener('click', () => { featGo(featCur() - 1); featReset(); });
+  featTrack.addEventListener('mouseenter', featStop);
+  featTrack.addEventListener('mouseleave', featStart);
+  featTrack.addEventListener('touchstart', featStop, { passive: true });
+  featStart();
+}
 
 // 3) Reveal-on-scroll (gated by .js in CSS so no-JS still shows everything)
 const io = new IntersectionObserver((entries) => {
