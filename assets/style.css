@@ -372,6 +372,19 @@ img{max-width:100%;display:block}
   .bean-row{grid-template-columns:1fr;gap:8px}
 }
 
+/* ===== STORE GRID (공간 목록 페이지) ===== */
+.store-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px 28px}
+.sg-card{display:flex;flex-direction:column;color:inherit}
+.sg-img{aspect-ratio:4/3;background-size:cover;background-position:center;filter:saturate(.95);transition:filter .4s}
+.sg-card:hover .sg-img{filter:saturate(1)}
+.sg-img.placeholder{display:flex;align-items:center;justify-content:center;background:var(--paper-2)}
+.sg-img.placeholder span{font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.24em;color:var(--ink-faint)}
+.sg-body{padding-top:18px}
+.sg-since{font-family:var(--mono);font-size:var(--t-micro);letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint)}
+.sg-name{font-family:var(--serif);font-size:var(--t-h4);line-height:var(--lh-h4);font-weight:600;margin:7px 0 9px}
+.sg-meta{font-size:var(--t-sm);color:var(--ink-soft);line-height:var(--lh-sm)}
+.sg-meta b{display:block;font-weight:400;color:var(--ink-faint);font-size:var(--t-cap);margin-top:5px}
+
 /* ===== STORE DETAIL PAGE ===== */
 .store-detail{padding:36px 0 120px}
 .back-link{display:inline-block;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.06em;
@@ -454,6 +467,7 @@ img{max-width:100%;display:block}
   .g-stage{aspect-ratio:3/2}
   .news-layout{grid-template-columns:1fr;gap:38px}
   .nf-title{font-size:var(--t-h3);line-height:var(--lh-h3)}
+  .store-grid{grid-template-columns:repeat(2,1fr);gap:26px 20px}
   .g-arrow{width:40px;height:40px}
   .br-m{display:none}
   .board-row{gap:16px;padding:20px 4px}
@@ -462,6 +476,7 @@ img{max-width:100%;display:block}
 }
 @media (max-width:520px){
   .news-grid{grid-template-columns:1fr}
+  .store-grid{grid-template-columns:1fr}
   .footer-inner{flex-direction:column;gap:40px}
   .st-index{flex-direction:column;gap:0}
   .st-index li{padding:16px 0}
