@@ -269,9 +269,9 @@ img{max-width:100%;display:block}
   font-family:var(--mono);font-size:var(--t-micro);letter-spacing:.14em;padding:4px 9px}
 .nc-img{height:210px;background-size:cover;background-position:center;filter:saturate(.92);transition:filter .4s}
 .news-card:hover .nc-img{filter:saturate(1)}
-.nc-body{padding:22px 24px 26px}
+.nc-body{padding:18px 22px 20px}
 .nc-tag{font-family:var(--mono);font-size:var(--t-micro);letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
-.nc-body h4{font-family:var(--serif);font-size:var(--t-body);font-weight:600;line-height:var(--lh-body);margin:12px 0 18px;min-height:3.4em}
+.nc-body h4{font-family:var(--serif);font-size:var(--t-body);font-weight:600;line-height:var(--lh-body);margin:8px 0 10px}
 .nc-date{font-family:var(--sans);font-size:var(--t-cap);color:var(--ink-faint);letter-spacing:.02em;font-weight:400}
 
 /* ===== FOOTER ===== */
