@@ -240,6 +240,28 @@ img{max-width:100%;display:block}
 /* ===== NEWS (터미널 이야기) ===== */
 .news{padding:150px 0;background:var(--paper-2)}
 .news-all{font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.12em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:3px}
+/* 비대칭 편집형: 대형 피처(좌) + 썸네일 인덱스(우) */
+.news-layout{display:grid;grid-template-columns:1.3fr .82fr;gap:60px;align-items:start;margin-top:8px}
+.news-feature{display:block}
+.nf-img{aspect-ratio:3/2;background-size:cover;background-position:center;filter:saturate(.95);transition:filter .45s}
+.news-feature:hover .nf-img{filter:saturate(1)}
+.nf-body{padding-top:24px}
+.nf-tag{font-family:var(--mono);font-size:var(--t-micro);letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.nf-tag em{font-style:normal;margin-left:8px;padding-left:8px;border-left:1px solid var(--line-strong);color:var(--ink-faint)}
+.nf-title{font-family:var(--serif);font-size:var(--t-h2);line-height:var(--lh-h2);font-weight:600;letter-spacing:-.01em;margin:14px 0 16px}
+.nf-date{font-family:var(--sans);font-size:var(--t-sm);color:var(--ink-faint);letter-spacing:.02em}
+
+.news-list{list-style:none;border-top:1px solid var(--ink)}
+.news-list li{border-bottom:1px solid var(--line)}
+.news-list a{display:grid;grid-template-columns:108px 1fr;gap:18px;align-items:center;
+  padding:20px 4px;transition:padding .25s ease}
+.news-list a:hover{padding-left:12px}
+.nl-thumb{aspect-ratio:4/3;background-size:cover;background-position:center;filter:saturate(.95)}
+.nl-meta{display:block;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.04em;color:var(--ink-faint);margin-bottom:9px}
+.nl-meta i{font-style:normal;color:var(--accent)}
+.nl-title{font-family:var(--serif);font-size:var(--t-h4);line-height:var(--lh-h4);font-weight:600;color:var(--ink)}
+
+/* 카드 그리드 (매거진 아카이브 페이지에서 사용) */
 .news-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
 .news-card{position:relative;background:var(--card);padding-bottom:8px;transition:background .25s}
 .news-card:hover{background:var(--paper)}
@@ -409,6 +431,7 @@ img{max-width:100%;display:block}
 /* ===== RESPONSIVE ===== */
 @media (max-width:1024px){
   .thero-grid{grid-template-columns:1fr;gap:48px;padding-top:64px}
+  .news-layout{gap:40px}
   .news-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:680px){
@@ -429,6 +452,8 @@ img{max-width:100%;display:block}
   .ab-body{padding:30px 28px}
   .feat-arrow{display:none}
   .g-stage{aspect-ratio:3/2}
+  .news-layout{grid-template-columns:1fr;gap:38px}
+  .nf-title{font-size:var(--t-h3);line-height:var(--lh-h3)}
   .g-arrow{width:40px;height:40px}
   .br-m{display:none}
   .board-row{gap:16px;padding:20px 4px}
