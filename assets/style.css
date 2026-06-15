@@ -45,6 +45,10 @@ body{
   word-break:keep-all;       /* 한글 단어가 중간에서 끊기지 않도록 */
   overflow-wrap:break-word;
 }
+/* 터미널 인물 figure 커서 (작게) */
+html,body{cursor:url('img/cursor-terminal.png') 6 2, auto}
+a,button,[role="button"],.icon-btn,.menu-toggle,.ss-arrow,.feat-arrow,label,summary{cursor:url('img/cursor-terminal.png') 6 2, pointer}
+
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 .container{width:min(1240px,90%);margin-inline:auto}
@@ -210,32 +214,28 @@ img{max-width:100%;display:block}
 .ab-body p{color:var(--ink-soft);margin-top:10px;font-size:var(--t-sm);font-weight:300;line-height:var(--lh-sm)}
 .ab-more{margin-top:18px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
 
-/* ===== SPACE SLIDER (공간) ===== */
+/* ===== SPACE GALLERY (공간, 영화관 느낌) ===== */
 .space{padding:150px 0;background:var(--paper)}
-.space-slider{position:relative;margin-top:50px}
-.ss-track{display:flex;gap:26px;overflow-x:auto;scroll-snap-type:x mandatory;
-  padding:0 5%;scrollbar-width:none;scroll-behavior:smooth}
-.ss-track::-webkit-scrollbar{display:none}
-.ss-slide{flex:0 0 clamp(620px,84%,1120px);scroll-snap-align:center;
-  background:var(--card);border:1px solid var(--line)}
-.ss-img{height:clamp(480px,68vh,740px);background-size:cover;background-position:center;filter:saturate(.92)}
-.ss-img.placeholder{
-  display:flex;align-items:center;justify-content:center;
-  background:var(--paper-2);
-}
-.ss-img.placeholder span{font-family:var(--mono);font-size:var(--t-micro);letter-spacing:.24em;color:var(--ink-faint)}
-.ss-info{padding:28px 32px;display:flex;flex-direction:column;gap:8px}
-.ss-info strong{font-family:var(--serif);font-size:var(--t-h3);line-height:var(--lh-h3);font-weight:600}
-.ss-info span{font-family:var(--sans);font-size:var(--t-sm);color:var(--ink-soft);font-weight:300}
-.ss-arrow{
-  position:absolute;top:clamp(240px,34vh,370px);transform:translateY(-50%);z-index:4;
-  width:48px;height:48px;border:1px solid var(--line-strong);cursor:pointer;
-  background:var(--paper);color:var(--ink);font-size:20px;line-height:1;
-  transition:.2s;
-}
-.ss-arrow:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-.ss-prev{left:2%}
-.ss-next{right:2%}
+.gallery{margin-top:50px}
+.g-stage{position:relative;width:100%;aspect-ratio:2/1;overflow:hidden;background:var(--paper-2)}
+.g-slide{position:absolute;inset:0;opacity:0;pointer-events:none;
+  background-size:cover;background-position:center;filter:saturate(.95);
+  transition:opacity .6s ease}
+.g-slide.on{opacity:1;pointer-events:auto}
+.g-slide.placeholder{display:flex;align-items:center;justify-content:center}
+.g-slide.placeholder span{font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.26em;color:var(--ink-faint)}
+.g-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:4;
+  background:none;border:none;cursor:pointer;color:#fff;
+  width:46px;height:46px;display:flex;align-items:center;justify-content:center;
+  opacity:.9;transition:opacity .2s;filter:drop-shadow(0 1px 5px rgba(0,0,0,.5))}
+.g-arrow:hover{opacity:1}
+.g-prev{left:12px}
+.g-next{right:12px}
+.g-caption{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-top:20px}
+.g-name{font-family:var(--serif);font-size:var(--t-h4);line-height:1.2;font-weight:600;letter-spacing:-.01em}
+.g-count{font-family:var(--sans);font-size:var(--t-sm);color:var(--ink-faint);letter-spacing:.06em;white-space:nowrap}
+.g-count b{color:var(--ink);font-weight:600}
+.g-count i{font-style:normal;margin:0 3px;color:var(--line-strong)}
 
 /* ===== NEWS (터미널 이야기) ===== */
 .news{padding:150px 0;background:var(--paper-2)}
@@ -427,12 +427,10 @@ img{max-width:100%;display:block}
   .award-banner{grid-template-columns:1fr}
   .ab-thumb{min-height:220px}
   .ab-body{padding:30px 28px}
-  .ss-arrow,.feat-arrow{display:none}
-  .space-slider{margin-top:34px}
-  .ss-track{gap:14px;padding:0 7%;scroll-padding:0 7%}
-  .ss-slide{flex:0 0 86%}
-  .ss-img{height:clamp(300px,52vh,460px)}
-  .ss-info{padding:22px 22px}
+  .feat-arrow{display:none}
+  .gallery{margin-top:34px}
+  .g-stage{aspect-ratio:3/2}
+  .g-arrow{width:40px;height:40px}
   .br-m{display:none}
   .board-row{gap:16px;padding:20px 4px}
   .b-gate{display:none}

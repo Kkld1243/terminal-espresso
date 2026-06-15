@@ -135,39 +135,28 @@
       <div class="container">
         <div class="sec-head center">
           <h3>터미널의 공간</h3>
-          <p>머무는 모든 순간이 위로가 되는 곳</p>
         </div>
-      </div>
 
-      <div class="space-slider" id="spaceSlider">
-        <button class="ss-arrow ss-prev" id="ssPrev" aria-label="이전">‹</button>
-        <div class="ss-track" id="ssTrack">
-          <a class="ss-slide" href="store.html?id=banpo">
-            <div class="ss-img" style="background-image:url('assets/img/store-bonjeom.jpg')"></div>
-            <div class="ss-info"><strong>반포점</strong><span>서울 서초구 · 평일 08:00–20:00 · 주말 10:00–20:00</span></div>
-          </a>
-          <a class="ss-slide" href="store.html?id=gangseo">
-            <div class="ss-img" style="background-image:url('assets/img/store-gangseo.jpg')"></div>
-            <div class="ss-info"><strong>강서점</strong><span>서울 강서구 · 평일 08:00–20:00 · 주말 10:00–20:00</span></div>
-          </a>
-          <a class="ss-slide is-soon" href="store.html?id=sadang">
-            <div class="ss-img placeholder"><span>COMING SOON</span></div>
-            <div class="ss-info"><strong>사당점</strong><span>외부 전경 촬영 예정</span></div>
-          </a>
-          <a class="ss-slide is-soon" href="store.html?id=bangbae">
-            <div class="ss-img placeholder"><span>COMING SOON</span></div>
-            <div class="ss-info"><strong>엔터하츠 방배</strong><span>외부 전경 촬영 예정</span></div>
-          </a>
-          <a class="ss-slide is-soon" href="store.html?id=nonhyeon">
-            <div class="ss-img placeholder"><span>COMING SOON</span></div>
-            <div class="ss-info"><strong>파마시아 논현</strong><span>외부 전경 촬영 예정</span></div>
-          </a>
-          <a class="ss-slide is-soon" href="store.html?id=gangdong">
-            <div class="ss-img placeholder"><span>COMING SOON</span></div>
-            <div class="ss-info"><strong>강동점</strong><span>외부 전경 촬영 예정</span></div>
-          </a>
+        <div class="gallery" id="spaceGallery">
+          <div class="g-stage" id="gStage">
+            <a class="g-slide on" href="store.html?id=banpo" data-name="반포점" style="background-image:url('assets/img/store-bonjeom.jpg')"></a>
+            <a class="g-slide" href="store.html?id=gangseo" data-name="강서점" style="background-image:url('assets/img/store-gangseo.jpg')"></a>
+            <a class="g-slide placeholder" href="store.html?id=sadang" data-name="사당점"><span>COMING SOON</span></a>
+            <a class="g-slide placeholder" href="store.html?id=bangbae" data-name="엔터하츠 방배"><span>COMING SOON</span></a>
+            <a class="g-slide placeholder" href="store.html?id=nonhyeon" data-name="파마시아 논현"><span>COMING SOON</span></a>
+            <a class="g-slide placeholder" href="store.html?id=gangdong" data-name="강동점"><span>COMING SOON</span></a>
+            <button class="g-arrow g-prev" id="gPrev" aria-label="이전">
+              <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M15 5l-7 7 7 7"/></svg>
+            </button>
+            <button class="g-arrow g-next" id="gNext" aria-label="다음">
+              <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+          <div class="g-caption">
+            <span class="g-name" id="gName">반포점</span>
+            <span class="g-count"><b id="gCur">01</b> <i>/</i> <span id="gTotal">06</span></span>
+          </div>
         </div>
-        <button class="ss-arrow ss-next" id="ssNext" aria-label="다음">›</button>
       </div>
     </section>
 

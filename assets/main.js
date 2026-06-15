@@ -9,18 +9,35 @@ mobileMenu?.querySelectorAll('a').forEach(a =>
   a.addEventListener('click', () => mobileMenu.classList.remove('open'))
 );
 
-// 2) Space slider arrows
-const track = document.getElementById('ssTrack');
-const step = () => {
-  const slide = track?.querySelector('.ss-slide');
-  return slide ? slide.getBoundingClientRect().width + 22 : 360;
-};
-document.getElementById('ssNext')?.addEventListener('click', () =>
-  track.scrollBy({ left: step(), behavior: 'smooth' })
-);
-document.getElementById('ssPrev')?.addEventListener('click', () =>
-  track.scrollBy({ left: -step(), behavior: 'smooth' })
-);
+// 2) Space gallery (영화관 느낌) — 크로스페이드 + 카운터 + 스와이프
+const gStage = document.getElementById('gStage');
+if (gStage) {
+  const gSlides = [...gStage.querySelectorAll('.g-slide')];
+  const gName = document.getElementById('gName');
+  const gCur = document.getElementById('gCur');
+  const gTotal = document.getElementById('gTotal');
+  const pad = (n) => String(n).padStart(2, '0');
+  let gIdx = 0;
+  gTotal.textContent = pad(gSlides.length);
+  const gShow = (i) => {
+    const n = gSlides.length;
+    gIdx = ((i % n) + n) % n;
+    gSlides.forEach((s, k) => s.classList.toggle('on', k === gIdx));
+    gName.textContent = gSlides[gIdx].dataset.name;
+    gCur.textContent = pad(gIdx + 1);
+  };
+  document.getElementById('gPrev')?.addEventListener('click', () => gShow(gIdx - 1));
+  document.getElementById('gNext')?.addEventListener('click', () => gShow(gIdx + 1));
+  let gx = null;
+  gStage.addEventListener('touchstart', (e) => { gx = e.touches[0].clientX; }, { passive: true });
+  gStage.addEventListener('touchend', (e) => {
+    if (gx == null) return;
+    const dx = e.changedTouches[0].clientX - gx;
+    if (Math.abs(dx) > 40) gShow(gIdx + (dx < 0 ? 1 : -1));
+    gx = null;
+  });
+  gShow(0);
+}
 
 // 2b) Feature (수상·선정) slider — 좌우 화살표 + 4초 자동 전환
 const featTrack = document.getElementById('featTrack');
@@ -57,7 +74,7 @@ const io = new IntersectionObserver((entries) => {
 }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
 
 document.querySelectorAll(
-  '.sb-card,.statement .container,.award-banner,.ss-slide,.news-card,.feature-text'
+  '.sb-card,.statement .container,.award-banner,.gallery,.news-card,.feature-text'
 ).forEach((el, i) => {
   el.classList.add('reveal');
   el.style.setProperty('--d', `${(i % 4) * 0.07}s`);
