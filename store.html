@@ -123,9 +123,9 @@
     document.getElementById('sdAddrEn').textContent = store.addrEn;
     document.getElementById('sdHours').textContent = store.hours;
     document.getElementById('sdMaps').innerHTML =
-      `<a href="https://map.naver.com/p/search/${q}" target="_blank" rel="noopener noreferrer">네이버지도</a>` +
-      `<a href="https://map.kakao.com/?q=${q}" target="_blank" rel="noopener noreferrer">카카오맵</a>` +
-      `<a href="https://www.google.com/maps/search/${q}" target="_blank" rel="noopener noreferrer">구글지도</a>`;
+      `<a href="https://map.naver.com/p/search/${q}" target="_blank" rel="noopener noreferrer"><img src="assets/img/map-naver.png" alt="" width="16" height="16">네이버지도</a>` +
+      `<a href="https://map.kakao.com/?q=${q}" target="_blank" rel="noopener noreferrer"><img src="assets/img/map-kakao.png" alt="" width="16" height="16">카카오맵</a>` +
+      `<a href="https://www.google.com/maps/search/${q}" target="_blank" rel="noopener noreferrer"><img src="assets/img/map-google.png" alt="" width="16" height="16">구글지도</a>`;
 
     const hero = document.getElementById('sdHero');
     const grid = document.getElementById('sdPhotos');
