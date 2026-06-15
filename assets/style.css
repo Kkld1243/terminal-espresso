@@ -131,7 +131,7 @@ img{max-width:100%;display:block}
 .trip-cap{padding-top:18px;display:flex;flex-direction:column;gap:5px}
 .trip-no{font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.1em;color:var(--ink-faint)}
 .trip-cap strong{font-family:var(--serif);font-size:18px;line-height:26px;font-weight:600;letter-spacing:-.01em}
-.trip-go{font-size:11.25px;color:var(--ink-faint);letter-spacing:.01em;display:flex;align-items:center;gap:8px}
+.trip-go{font-size:14px;font-weight:500;color:var(--ink-soft);letter-spacing:.01em;display:flex;align-items:center;gap:8px}
 .trip-go i{font-style:normal;color:var(--ink-faint);transition:transform .25s,color .25s}
 .trip:hover .trip-go i{color:var(--ink);transform:translateX(5px)}
 
