@@ -419,6 +419,11 @@ img{max-width:100%;display:block}
   .ab-thumb{min-height:220px}
   .ab-body{padding:30px 28px}
   .ss-arrow{display:none}
+  .space-slider{margin-top:34px}
+  .ss-track{gap:14px;padding:0 7%;scroll-padding:0 7%}
+  .ss-slide{flex:0 0 86%}
+  .ss-img{height:clamp(300px,52vh,460px)}
+  .ss-info{padding:22px 22px}
   .br-m{display:none}
   .board-row{gap:16px;padding:20px 4px}
   .b-gate{display:none}
