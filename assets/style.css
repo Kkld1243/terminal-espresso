@@ -245,10 +245,10 @@ img{max-width:100%;display:block}
 .news-feature{display:block}
 .nf-img{aspect-ratio:3/2;background-size:cover;background-position:center;filter:saturate(.95);transition:filter .45s}
 .news-feature:hover .nf-img{filter:saturate(1)}
-.nf-body{padding-top:24px}
+.nf-body{padding-top:20px}
 .nf-tag{font-family:var(--mono);font-size:var(--t-micro);letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
 .nf-tag em{font-style:normal;margin-left:8px;padding-left:8px;border-left:1px solid var(--line-strong);color:var(--ink-faint)}
-.nf-title{font-family:var(--serif);font-size:var(--t-h2);line-height:var(--lh-h2);font-weight:600;letter-spacing:-.01em;margin:14px 0 16px}
+.nf-title{font-family:var(--serif);font-size:var(--t-h2);line-height:var(--lh-h2);font-weight:600;letter-spacing:-.01em;margin:9px 0 10px}
 .nf-date{font-family:var(--sans);font-size:var(--t-sm);color:var(--ink-faint);letter-spacing:.02em}
 
 .news-list{list-style:none;border-top:1px solid var(--ink)}
@@ -257,7 +257,7 @@ img{max-width:100%;display:block}
   padding:20px 4px;transition:padding .25s ease}
 .news-list a:hover{padding-left:12px}
 .nl-thumb{aspect-ratio:4/3;background-size:cover;background-position:center;filter:saturate(.95)}
-.nl-meta{display:block;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.04em;color:var(--ink-faint);margin-bottom:9px}
+.nl-meta{display:block;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.04em;color:var(--ink-faint);margin-bottom:5px}
 .nl-meta i{font-style:normal;color:var(--accent)}
 .nl-title{font-family:var(--serif);font-size:var(--t-h4);line-height:var(--lh-h4);font-weight:600;color:var(--ink)}
 
