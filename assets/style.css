@@ -255,6 +255,7 @@ img{max-width:100%;display:block}
 .news-list li{border-bottom:1px solid var(--line)}
 .news-list a{display:grid;grid-template-columns:108px 1fr;gap:18px;align-items:center;
   padding:20px 4px;transition:padding .25s ease}
+.news-list li:first-child a{padding-top:0}
 .news-list a:hover{padding-left:12px}
 .nl-thumb{aspect-ratio:4/3;background-size:cover;background-position:center;filter:saturate(.95)}
 .nl-meta{display:block;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.04em;color:var(--ink-faint);margin-bottom:5px}
